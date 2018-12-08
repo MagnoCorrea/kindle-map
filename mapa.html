@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+  <p id="demo"></p>
+  <img id="img1" src="imagem1.gif" style="display: 'none';"> </div>
+  <img id="img2" src="imagem2.gif" style="display: 'none';"> </div>
+
+  <script>
+  var myVar = setInterval(myTimer, 2000);
+  var togle = true;
+  function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    if(togle){
+      document.getElementById("img1").style.display = "inline";
+      document.getElementById("img2").style.display = "none";
+      togle = false;
+    }else{
+      document.getElementById("img2").style.display = "inline";
+      document.getElementById("img1").style.display = "none";
+      togle = true;
+    }
+  }
+  </script>
+  </body>
+
+</html>
